@@ -9,7 +9,7 @@ import (
 func sseHandler(w http.ResponseWriter, r *http.Request) {
 	header := w.Header()
 	header.Add("Content-Type", "text/event-stream")
-	for count := 0;;count++ {
+	for count := 0; ; count++ {
 		fmt.Fprintln(w, "event: ping")
 		fmt.Fprintf(w, "id: %d\n", count)
 		fmt.Fprintf(w, "data:{\"time\":\"%s\"}\n\n", time.Now())
