@@ -11,7 +11,8 @@
 
 <script>
   var button = document.querySelector('button');
-  var evtSource = new EventSource('http://10.0.0.3:8080/sse', {withCredentials: true});
+  // var evtSource = new EventSource('http://10.0.0.3:8080/sse', {withCredentials: true});
+  var evtSource = new EventSource('http://10.0.0.3:8080/sse');
   console.log(evtSource.withCredentials);
   console.log(evtSource.readyState);
   console.log(evtSource.url);
