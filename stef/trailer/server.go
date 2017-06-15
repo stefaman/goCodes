@@ -40,19 +40,19 @@ func TrailerHandler(w http.ResponseWriter, req *http.Request) {
 	// the trailers you will set during the HTTP
 	// response. These three headers are actually sent in
 	// the trailer.
-	// w.Header().Set("Trailer", "AtEnd1, AtEnd2")
-	// w.Header().Add("Trailer", "AtEnd3")
+	w.Header().Set("Trailer", "AtEnd1, AtEnd2")
+	w.Header().Add("Trailer", "AtEnd3")
 
 	w.Header().Set("Content-Type", "text/plain; charset=utf-8") // normal header
 	w.WriteHeader(http.StatusOK)
 
 	w.Header().Set("AtEnd1", "value 1")
 	io.WriteString(w, "This HTTP response has both headers before this text and trailers at the end.\n")
-	if flusher, ok := w.(http.Flusher); ok {
-		log.Println("flush")
-		flusher.Flush()
-	}
-	time.Sleep(5 * time.Second)
+	// if flusher, ok := w.(http.Flusher); ok {
+	// 	log.Println("flush")
+	// 	flusher.Flush()
+	// }
+	time.Sleep(1 * time.Second)
 	io.WriteString(w, "AtEnd1: valu1\n")
 	w.Header().Set("AtEnd2", "value 2")
 	w.Header().Set("AtEnd3", "value 3") // These will appear as trailers.

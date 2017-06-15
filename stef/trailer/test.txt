@@ -1,0 +1,9 @@
+HTTP/1.1 200 OK
+Content-Type: text/plain; charset=utf-8
+Trailer: AtEnd1, AtEnd2
+Trailer: AtEnd3
+Date: Thu, 15 Jun 2017 17:55:55 GMT
+Transfer-Encoding: chunked
+
+This HTTP response has both headers before this text and trailers at the end.
+AtEnd1: valu1
