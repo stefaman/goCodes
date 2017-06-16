@@ -1,5 +1,5 @@
 gopl.io/
-.git/
+#.git/
 github.com
 gopkg.in
 multi-language-bench
