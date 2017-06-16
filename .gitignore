@@ -1,5 +1,6 @@
 gopl.io/
 #.git/
 github.com
+#golang.org
 gopkg.in
 multi-language-bench
