@@ -1,0 +1,20 @@
+HTTP/1.1 200 OK
+Content-Type: text/plain; charset=utf-8
+Trailer: AtEnd1, AtEnd2
+Trailer: Expires
+Date: Thu, 15 Jun 2017 19:13:00 GMT
+Transfer-Encoding: chunked
+
+4e
+This HTTP response has both headers before this text and trailers at the end.
+
+14
+just another string
+
+0
+Atend1: value 1
+Atend2: value 2
+Expires: Thu, 15 Jun 2017 19:15:01 GMT
+atfirst: dd
+atlast: dd
+
